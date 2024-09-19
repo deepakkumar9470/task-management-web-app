@@ -1,25 +1,25 @@
 import { apiSlice } from './apiSlice';
-// const USERS_URL = '/api/user';
-// const AUTH_URL = process.env.REACT_API_URL
+const url = 'http://localhost:5000/';
+const HOSTET_URL = 'https://task-management-web-app-pv5h.onrender.com';
 
 export const userApiSlice = apiSlice.injectEndpoints({
     endpoints : (builder) =>({
        login:builder.mutation({
         query:(data)=>({
-            url : `/api/user/login`,
+            url : `${HOSTET_URL}/api/user/login`,
             method : 'POST',
             body : data
         }),
        }),
        logout:builder.mutation({
         query:(data)=>({
-            url : `/api/user/logout`,
+            url : `${HOSTET_URL}/api/user/logout`,
             method : 'POST',
         }),
        }),
        registerUser:builder.mutation({
         query:(data)=>({
-            url : `http://localhost:5000/api/user/register`,
+            url : `${HOSTET_URL}/api/user/register`,
             method : 'POST',
             body : data
         }),

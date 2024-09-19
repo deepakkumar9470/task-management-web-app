@@ -1,9 +1,11 @@
 import {createApi,fetchBaseQuery} from '@reduxjs/toolkit/query/react'
+const url = 'http://localhost:5000/';
+const HOSTET_URL = 'https://task-management-web-app-pv5h.onrender.com'
 
 export const taskApi = createApi({
     reducerPath : 'taskapi',
     baseQuery :fetchBaseQuery({
-        baseUrl : 'http://localhost:5000/'
+        baseUrl : HOSTET_URL
     }),
     endpoints :(builder)=>({
         getAllTasks : builder.query({
