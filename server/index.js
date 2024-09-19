@@ -14,9 +14,8 @@ app.use(express.json());
 app.use(cookieParser());
 app.use(express.urlencoded({extended : true}))
 app.use(cors({
-    origin: ['https://task-management-web-app-1-5em0.onrender.com'], 
+    origin: 'https://task-management-web-app-1-5em0.onrender.com', 
     methods: 'GET,POST,PUT,DELETE',
-    allowedHeaders: 'Content-Type,Authorization',
     credentials: true,
   }));
 
