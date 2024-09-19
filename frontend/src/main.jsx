@@ -14,11 +14,13 @@ import { Provider } from "react-redux";
 import store from "./store.js";
 import ProtectedRoutes from "./components/ProtectedRoutes.jsx";
 import TaskLists from "./pages/TaskLists.jsx";
+import NotFound from "./components/NotFound.jsx";
 
 const router = createBrowserRouter(
   createRoutesFromElements(
     <Route path="/" element={<App />}>
       <Route index={true} element={<HomeScreen />} />
+      <Route path="*" element={<NotFound />} />
       <Route path="/login" element={<Login />} />
       <Route path="/register" element={<SignUp />} />
       <Route path="" element={<ProtectedRoutes />}>
